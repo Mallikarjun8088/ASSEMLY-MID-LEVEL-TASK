@@ -1,0 +1,16 @@
+MOV R1,#30H	 //USER INPUT 
+CLR C 
+
+	UP: MOV A,@R1
+		SUBB A,#0AH
+		JC NEXT  
+		ADD A,#41H
+		MOV R5,A
+		SJMP NEXT2
+		
+  NEXT: MOV A,@R1
+		ADD A,#30H
+		MOV R5,A
+		
+ NEXT2: NOP 
+		END
